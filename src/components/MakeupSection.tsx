@@ -10,12 +10,12 @@ export default function MakeupSection() {
   ];
 
   return (
-    <section id="maquillaje" className="py-24 bg-brand-nude/30">
+    <section id="maquillaje" className="py-24 bg-brand-surface">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="text-brand-taupe font-semibold uppercase tracking-[0.2em] text-xs">Arte y Color</span>
-          <h2 className="text-4xl md:text-5xl font-serif text-stone-900">Realzá tu <span className="italic">belleza</span> natural.</h2>
-          <p className="text-stone-600 text-lg">
+          <h2 className="text-4xl md:text-5xl font-serif text-[#2c1810]">Realzá tu <span className="italic text-brand-taupe">belleza</span> natural.</h2>
+          <p className="text-[#6b4c3b] text-lg">
             El maquillaje es tu herramienta de expresión. Descubrí texturas y tonos que iluminan tu rostro y potencian tu confianza diaria.
           </p>
         </div>
@@ -28,11 +28,11 @@ export default function MakeupSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative rounded-3xl overflow-hidden aspect-[4/5] shadow-lg cursor-pointer bg-stone-100"
+              className="group relative rounded-3xl overflow-hidden aspect-[4/5] shadow-lg cursor-pointer bg-[#f0e2d8]"
             >
-              <img 
-                src={cat.img} 
-                alt={cat.name} 
+              <img
+                src={cat.img}
+                alt={cat.name}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
@@ -41,9 +41,9 @@ export default function MakeupSection() {
                 }}
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/20 to-transparent flex flex-col justify-end p-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2c1810]/80 via-[#2c1810]/10 to-transparent flex flex-col justify-end p-6">
                 <h3 className="text-white font-serif text-2xl mb-2">{cat.name}</h3>
-                <div className="flex items-center gap-2 text-white/80 text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="flex items-center gap-2 text-brand-taupe text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
                   <span>Ver más</span>
                   <Sparkles className="w-3 h-3" />
                 </div>
@@ -59,7 +59,7 @@ export default function MakeupSection() {
             href="https://wa.me/50672952666"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-stone-900 text-white px-10 py-4 rounded-full text-base font-medium shadow-xl shadow-stone-200 transition-all"
+            className="inline-flex items-center justify-center gap-2 bg-brand-taupe text-white px-10 py-4 rounded-full text-base font-bold shadow-xl shadow-brand-taupe/20 transition-all hover:bg-brand-rose"
           >
             <MessageCircle className="w-5 h-5" />
             Ver Catálogo de Maquillaje

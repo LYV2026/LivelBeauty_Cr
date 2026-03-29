@@ -18,17 +18,17 @@ export default function App() {
   return (
     <div className="relative">
       <Header />
-      
+
       <main>
         <Hero />
         <TrustBar />
-        
+
         <PerfumeSection />
-        
-        <section className="py-12 bg-white">
+
+        <section className="py-12 bg-[#fffaf7]">
           <div className="container mx-auto px-4 text-center">
-            <div className="h-px w-24 bg-brand-rose/30 mx-auto mb-8" />
-            <p className="font-serif italic text-2xl text-stone-400 max-w-2xl mx-auto">
+            <div className="h-px w-24 bg-brand-taupe/30 mx-auto mb-8" />
+            <p className="font-serif italic text-2xl text-[#6b4c3b] max-w-2xl mx-auto">
               "La elegancia es la única belleza que nunca se desvanece."
             </p>
           </div>
@@ -40,11 +40,11 @@ export default function App() {
         <FeaturedProducts />
         <Testimonials />
         <GiftsSection />
-        
+
         <FAQ />
 
         {/* Final CTA Section */}
-        <section className="py-24 bg-brand-nude relative overflow-hidden">
+        <section className="py-24 bg-brand-surface relative overflow-hidden">
           <div className="container mx-auto px-4 text-center relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -52,13 +52,13 @@ export default function App() {
               viewport={{ once: true }}
               className="max-w-3xl mx-auto space-y-8"
             >
-              <h2 className="text-4xl md:text-6xl font-serif text-stone-900 leading-tight">
-                ¿Lista para realzar tu <span className="italic">belleza</span>?
+              <h2 className="text-4xl md:text-6xl font-serif text-[#2c1810] leading-tight">
+                ¿Lista para realzar tu <span className="italic text-brand-taupe">belleza</span>?
               </h2>
-              <p className="text-stone-600 text-xl">
+              <p className="text-[#6b4c3b] text-xl">
                 Escribinos hoy mismo por WhatsApp y recibí asesoría personalizada. Estamos en Costa Rica para servirte con amor y detalle.
               </p>
-              
+
               <div className="flex flex-col items-center gap-6">
                 <motion.a
                   whileHover={{ scale: 1.05 }}
@@ -66,25 +66,25 @@ export default function App() {
                   href="https://wa.me/50672952666"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 bg-stone-900 text-white px-12 py-5 rounded-full text-lg font-bold shadow-2xl shadow-stone-300 transition-all"
+                  className="flex items-center justify-center gap-3 bg-brand-taupe text-white px-12 py-5 rounded-full text-lg font-bold shadow-2xl shadow-brand-taupe/30 transition-all hover:bg-brand-rose"
                 >
                   <MessageCircle className="w-6 h-6" />
-                  Chatear con Livel Beauty
+                  Chatear con Mystique Beauty
                 </motion.a>
-                
-                <div className="flex items-center gap-8 text-stone-400 text-sm uppercase tracking-[0.2em] font-medium">
+
+                <div className="flex items-center gap-8 text-[#6b4c3b] text-sm uppercase tracking-[0.2em] font-medium">
                   <span>7295-2666</span>
-                  <div className="w-1 h-1 rounded-full bg-stone-300" />
-                  <span>Facebook: Livel Beauty</span>
+                  <div className="w-1 h-1 rounded-full bg-brand-taupe" />
+                  <span>Facebook: Mystique Beauty CR</span>
                 </div>
               </div>
             </motion.div>
           </div>
-          
+
           {/* Decorative Background */}
-          <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-            <div className="absolute top-10 left-10 w-64 h-64 border border-stone-900 rounded-full" />
-            <div className="absolute bottom-10 right-10 w-96 h-96 border border-stone-900 rounded-full" />
+          <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
+            <div className="absolute top-10 left-10 w-64 h-64 border border-brand-taupe rounded-full" />
+            <div className="absolute bottom-10 right-10 w-96 h-96 border border-brand-taupe rounded-full" />
           </div>
         </section>
       </main>

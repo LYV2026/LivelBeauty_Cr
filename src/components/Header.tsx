@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { MessageCircle, Menu, X, ShoppingBag, Sparkles, Heart, Facebook, Instagram } from "lucide-react";
+import { MessageCircle, Menu, X, Facebook, Instagram } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function Header() {
@@ -27,7 +27,9 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass-effect py-3 shadow-sm" : "bg-transparent py-6"
+        isScrolled
+          ? "bg-[#fffaf7]/95 backdrop-blur-md border-b border-[#e8d5c8] py-3 shadow-sm"
+          : "bg-transparent py-6"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
@@ -35,9 +37,9 @@ export default function Header() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-2xl font-serif font-bold tracking-tighter text-stone-900"
+            className="text-2xl font-serif font-bold tracking-tighter text-[#2c1810]"
           >
-            LIVEL <span className="font-light italic text-brand-taupe">BEAUTY</span>
+            MYSTIQUE <span className="font-light italic text-brand-taupe">BEAUTY</span>
           </motion.div>
         </div>
 
@@ -47,7 +49,7 @@ export default function Header() {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-stone-600 hover:text-brand-taupe transition-colors uppercase tracking-widest"
+              className="text-sm font-medium text-[#6b4c3b] hover:text-brand-taupe transition-colors uppercase tracking-widest"
             >
               {link.name}
             </a>
@@ -61,14 +63,14 @@ export default function Header() {
             href="https://wa.me/50672952666"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex items-center gap-2 bg-stone-900 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-stone-800 transition-all shadow-lg shadow-stone-200"
+            className="hidden md:flex items-center gap-2 bg-brand-taupe text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-brand-rose transition-all shadow-lg shadow-brand-taupe/20"
           >
             <MessageCircle className="w-4 h-4" />
             WhatsApp
           </motion.a>
 
           <button
-            className="md:hidden p-2 text-stone-900"
+            className="md:hidden p-2 text-[#2c1810]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
@@ -82,13 +84,13 @@ export default function Header() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-stone-100 shadow-xl p-6 flex flex-col gap-4"
+          className="md:hidden absolute top-full left-0 right-0 bg-[#fffaf7] border-t border-[#e8d5c8] shadow-xl p-6 flex flex-col gap-4"
         >
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-lg font-serif text-stone-800 py-2 border-b border-stone-50"
+              className="text-lg font-serif text-[#2c1810] py-2 border-b border-[#e8d5c8]"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
@@ -98,17 +100,17 @@ export default function Header() {
             href="https://wa.me/50672952666"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-stone-900 text-white py-4 rounded-xl font-medium mt-4"
+            className="flex items-center justify-center gap-2 bg-brand-taupe text-white py-4 rounded-xl font-bold mt-4"
           >
             <MessageCircle className="w-5 h-5" />
             Escribinos por WhatsApp
           </a>
 
-          <div className="flex items-center justify-center gap-6 mt-4 pt-4 border-t border-stone-50">
-            <a href="https://www.facebook.com/mystiqueCR20" target="_blank" rel="noopener noreferrer" className="text-stone-600 hover:text-brand-taupe transition-colors">
+          <div className="flex items-center justify-center gap-6 mt-4 pt-4 border-t border-[#e8d5c8]">
+            <a href="https://www.facebook.com/mystiqueCR20" target="_blank" rel="noopener noreferrer" className="text-[#6b4c3b] hover:text-brand-taupe transition-colors">
               <Facebook className="w-6 h-6" />
             </a>
-            <a href="https://www.instagram.com/livel_beauty" target="_blank" rel="noopener noreferrer" className="text-stone-600 hover:text-brand-taupe transition-colors">
+            <a href="https://www.instagram.com/livel_beauty" target="_blank" rel="noopener noreferrer" className="text-[#6b4c3b] hover:text-brand-taupe transition-colors">
               <Instagram className="w-6 h-6" />
             </a>
           </div>

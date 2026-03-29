@@ -15,7 +15,7 @@ export default function Testimonials() {
     },
     {
       name: "Lucía M.",
-      text: "Buscaba un regalo especial y en Livel Beauty encontré el combo perfecto. A mi hermana le encantó todo. ¡Gracias por el detalle!",
+      text: "Buscaba un regalo especial y en Mystique Beauty encontré el combo perfecto. A mi hermana le encantó todo. ¡Gracias por el detalle!",
       rating: 5
     },
     {
@@ -26,11 +26,11 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="testimonios" className="py-24 bg-brand-nude/20">
+    <section id="testimonios" className="py-24 bg-brand-nude">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="text-brand-taupe font-semibold uppercase tracking-[0.2em] text-xs">Experiencias Reales</span>
-          <h2 className="text-4xl md:text-5xl font-serif text-stone-900">Lo que dicen nuestras <span className="italic">clientas</span></h2>
+          <h2 className="text-4xl md:text-5xl font-serif text-[#2c1810]">Lo que dicen nuestras <span className="italic text-brand-taupe">clientas</span></h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -41,17 +41,17 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white p-8 md:p-10 rounded-[40px] shadow-sm border border-stone-100 relative"
+              className="bg-[#fffaf7] p-8 md:p-10 rounded-[40px] shadow-sm border border-[#e8d5c8] relative"
             >
-              <Quote className="absolute top-8 right-8 w-12 h-12 text-brand-blush/40 -z-0" />
+              <Quote className="absolute top-8 right-8 w-12 h-12 text-brand-taupe/20 -z-0" />
               <div className="relative z-10 space-y-4">
-                <div className="flex gap-1 text-brand-rose">
+                <div className="flex gap-1 text-brand-taupe">
                   {[...Array(t.rating)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
                 </div>
-                <p className="text-stone-700 text-lg italic leading-relaxed font-serif">"{t.text}"</p>
-                <div className="pt-4 border-t border-stone-50">
-                  <p className="font-bold text-stone-900 uppercase tracking-widest text-sm">{t.name}</p>
-                  <p className="text-xs text-stone-400">Clienta Verificada</p>
+                <p className="text-[#2c1810] text-lg italic leading-relaxed font-serif">"{t.text}"</p>
+                <div className="pt-4 border-t border-[#e8d5c8]">
+                  <p className="font-bold text-[#2c1810] uppercase tracking-widest text-sm">{t.name}</p>
+                  <p className="text-xs text-[#6b4c3b]">Clienta Verificada</p>
                 </div>
               </div>
             </motion.div>
